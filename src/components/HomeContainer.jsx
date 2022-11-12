@@ -53,7 +53,7 @@ function HomeContainer() {
                         </div>
 
                     ))}
-                </div>Í
+                </div>
 
             </div>
         </section>
