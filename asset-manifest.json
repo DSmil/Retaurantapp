@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/Retaurantapp/static/css/main.1b23047c.css",
-    "main.js": "/Retaurantapp/static/js/main.9181d0e3.js",
+    "main.css": "/Retaurantapp/static/css/main.3b829557.css",
+    "main.js": "/Retaurantapp/static/js/main.87a590fc.js",
     "static/media/c3.png": "/Retaurantapp/static/media/c3.55f83414f33f66456b35.png",
     "static/media/fi1.png": "/Retaurantapp/static/media/fi1.3f43e51b6058550d1f44.png",
     "static/media/fi2.png": "/Retaurantapp/static/media/fi2.7df8d86c47a9bfb9d501.png",
@@ -10,12 +10,14 @@
     "static/media/heroBg.png": "/Retaurantapp/static/media/heroBg.c43c4862422e70d88698.png",
     "static/media/delivery.png": "/Retaurantapp/static/media/delivery.bf9130a0962fbe091abc.png",
     "static/media/avatar.png": "/Retaurantapp/static/media/avatar.68cdc4513e601d28a382.png",
+    "static/media/emptyCart.svg": "/Retaurantapp/static/media/emptyCart.71ad17e692d71caa77c6c9351f84756b.svg",
+    "static/media/NotFound.svg": "/Retaurantapp/static/media/NotFound.4e90bb93460bfd8d9e2c86b42ef91a4a.svg",
     "index.html": "/Retaurantapp/index.html",
-    "main.1b23047c.css.map": "/Retaurantapp/static/css/main.1b23047c.css.map",
-    "main.9181d0e3.js.map": "/Retaurantapp/static/js/main.9181d0e3.js.map"
+    "main.3b829557.css.map": "/Retaurantapp/static/css/main.3b829557.css.map",
+    "main.87a590fc.js.map": "/Retaurantapp/static/js/main.87a590fc.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b23047c.css",
-    "static/js/main.9181d0e3.js"
+    "static/css/main.3b829557.css",
+    "static/js/main.87a590fc.js"
   ]
 }
