@@ -15,7 +15,7 @@ function Header() {
     const firebaseAuth = getAuth(app);
     const provider = new GoogleAuthProvider();
 
-    const [{ user }, dispatch] = useStateValue();
+    const [{ user, cartShow, cartItems }, dispatch] = useStateValue();
 
     const [isMenu, setItemMenu] = useState(false);
 
@@ -42,6 +42,13 @@ function Header() {
             user: null,
         });
     };
+
+    const showCart = () => {
+        dispatch({
+            type: actionType.SET_CART_SHOW,
+            cartShow: !cartShow,
+        });
+    }
     return (
         <header className="fixed z-50 w-screen p-3 px-4 md:p-6 md:px-16 bg-primary">
             {/* desktop & tablet */}
@@ -83,17 +90,20 @@ function Header() {
                     <motion.div
                         whileTap={{ scale: 0.6 }}
                         className="relative flex items-center justify-center"
+                        onClick={showCart}
                     >
                         <MdShoppingBasket className="text-textColor text-2xl ml-8 cursor-pointer" />
-                        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
-                            <p className="text-xs text-white font-semibold">2</p>
-                        </div>
+                        {cartItems && cartItems.length > 0 && (
+                            <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
+                                <p className="text-xs text-white font-semibold">{cartItems.length}</p>
+                            </div>
+                        )}
                     </motion.div>
 
                     <div className="relative">
                         <motion.img
                             whileTap={{ scale: 0.6 }}
-                            src={user ? user.photoURL : Avatar}
+                            src={user ? user?.photoURL : Avatar}
                             className="w-10 min-w-[40px] h-10 min-h-[40px] drop-shadow-2xl cursor-pointer rounded-full"
                             alt="userprofile"
                             onClick={login}
@@ -134,11 +144,14 @@ function Header() {
                 <motion.div
                     whileTap={{ scale: 0.6 }}
                     className="relative flex items-center justify-center right-6"
+                    onClick={showCart}
                 >
                     <MdShoppingBasket className="text-textColor text-2xl ml-8 cursor-pointer" />
-                    <div className="absolute -top-0 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
-                        <p className="text-xs text-white font-semibold">2</p>
-                    </div>
+                    {cartItems && cartItems.length > 0 && (
+                        <div className="absolute -top-2 -right-2 w-5 h-5 rounded-full bg-cartNumBg flex items-center justify-center">
+                            <p className="text-xs text-white font-semibold">{cartItems.length}</p>
+                        </div>
+                    )}
                 </motion.div>
 
                 <Link
